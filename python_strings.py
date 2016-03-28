@@ -1,5 +1,6 @@
 import re
 
+
 def length(string):
     """1:Caculates the length of any string,Also could do this with len(str)"""
     count = 0
@@ -16,7 +17,7 @@ def count_every_letter(string):
             results[letter] += 1
         else:
             results[letter] = 1
-    return results 
+    return results
 
 
 def first2_last2(string):
@@ -77,6 +78,7 @@ def not_bad_good(string):
         sentence = string
     return sentence
 
+
 def longest_word(lists):
     """ 8: Shows the longest word or words in a sentence! """
     lists = lists.split()
@@ -113,13 +115,18 @@ def remove_odd_index(string):
 
 
 def count_word(sentence):
-    """ 12: """
-    sentence = sentence.split()
-    for word in sentence:
-        if word in dict_word:
-            pass
+    """ 12: counts the amount of words in a program"""
+    counts = dict()
+    words = sentence.split()
+    for word in words:
+        if word in counts:
+            counts[word] += 1
         else:
-            pass
+            counts[word] = 1
+    return counts
+
+print(count_word("Hello world I love the world, the world is great"))
+        
 
 
 def upper_lower():
@@ -190,10 +197,10 @@ def upper_two_four(string):
     """
     first_four = string[:4]
     capital = re.findall(r'[A-Z]', first_four)
-    if len(capital)>= 2:
+    if len(capital) >= 2:
         return string.upper()
     else:
         return string
-        
+
 
 print(insert_string_middle('{{N}}', 'Nuzz'))

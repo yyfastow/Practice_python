@@ -3,8 +3,8 @@ import sys
 import re
 
 # from python_lists import (make_list, make_list_num, make_str_list,
-                          # make_num_str_list)
- 
+#                          make_num_str_list)
+
 
 def dev7_multiply5():
     """ 1: returns all numbers in range between 1500 and 2700
@@ -36,7 +36,7 @@ def celsius_farenheit():
 
 def guess_number():
     """ 3: Game in which user guesses random number from 1 to 9."""
-    computer_guess = random.randint(1,10)
+    computer_guess = random.randint(1, 10)
     while True:
         try:
             user_guess = int(input("Guess a number between 1 to 9: "))
@@ -50,7 +50,7 @@ def guess_number():
 def make_two_triangle(size):
     """ 4: Returns two trianges back to back based on size given by user. """
     for num in range(0, size + 1):
-        print(('* ' * num) +  ('  ' * ((size - num) * 2)) + ('* ' * num))
+        print(('* ' * num) + ('  ' * ((size - num) * 2)) + ('* ' * num))
     for num in range(1, size):
         print(('* ' * (size - num)) + ('  ' * num * 2) + ('* ' * (size - num)))
 
@@ -76,7 +76,7 @@ def count_even_odd(num_list):
     """ 6: returns the amount of numbers in a list is even or odd.
     Could recieve a list or tuples.
     Need to get import from practice_list to turn string into list also.
-    and remove all non numbers from list 
+    and remove all non numbers from list
     """
     # num_list = make_list_num(num_list)
     even = 0
@@ -119,7 +119,7 @@ def fibonacci_sequence(num):
 def fizzbuzz(num):
     """" 10: Returns the all numbers from 0 to a given number.
     All numbers devisiable by 3 we replace the number by Fizz,
-    divisiable by 5 we print Buzz and if divisable by 5 and 3 we print FizzBall.
+    divisiable by 5 we print Buzz and if divisable by 5 and 3 we print FizzBall
     """
     for number in range(num + 1):
         if number % 3 == 0 and number % 5 == 0:
@@ -184,7 +184,6 @@ def password_validator(password):
     letter, one uppercase letter, one number and one of these '$#@'.
     """
     good_password = False
-    conditions = 0
     if len(password) > 5 and len(password) < 17:
         if not re.search("[a-z]", password):
             pass
@@ -204,10 +203,9 @@ def password_validator(password):
 
 def even_num_between_100_400():
     """ 16: Returns all even numbers between 100 and 400."""
-    for number in range(100,399, 2):
+    for number in range(100, 399, 2):
         print("{},".format(number), end=" ")
     print("400.")
 
 
 password_validator("Hello!12@")
-
