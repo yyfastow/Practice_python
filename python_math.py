@@ -44,9 +44,11 @@ class Cylinder:
     height = int(input("Height: "))
 
     def volume(self):
+        """ caculates the volume of cylinder """
         return round((math.pi * (self.radius**2)) * self.height, 2)
 
     def surface_area(self):
+        """ caculates the surface area of cylinder """
         return round((math.pi * self.radius * 2 * self.height)
                      + (math.pi * (self.radius**2) * 2), 2)
 
